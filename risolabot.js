@@ -226,20 +226,21 @@ bot.on('message', async (msg) => {
   
 // / 🔁 Kanalga ulangan guruhdagi kommentariyaga AI javob berish
   if (
-    msg.chat.type === 'supergroup' &&
-    msg.reply_to_message &&
-    msg.reply_to_message.sender_chat
-  ) {
-    try {
-      const aiReply = await getAIResponse(text);
-      await bot.sendMessage(chatId, aiReply, {
-        reply_to_message_id: msg.message_id
-      });
-    } catch (error) {
-      console.error('❌ Kanal komment javobida xato:', error.message);
-    }
-    return;
+  msg.chat.type === 'supergroup' &&
+  msg.reply_to_message &&
+  msg.reply_to_message.sender_chat
+) {
+  try {
+    const aiReply = await getAIResponse(text);
+    await bot.sendMessage(chatId, aiReply, {
+      reply_to_message_id: msg.message_id
+    });
+  } catch (error) {
+    console.error('❌ Kanal komment javobida xato:', error.message);
   }
+  return; // 👉 bu muhim!
+}
+
 
   // Admin javob qaytaryaptimi?
  const state = userStates.get(chatId);
