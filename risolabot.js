@@ -123,7 +123,6 @@ async function getAIResponse(prompt) {
 ⬅️ Madina ➝ Namangan
 
 📅 Parvoz sanalari:
-🗓 31-iyul
 🗓 7-avgust
 🗓 14-avgust
 🗓 21-avgust
@@ -135,7 +134,7 @@ Reyslar milliy aviakompaniya orqali amalga oshiriladi
 
  Agar mijoz manzil haqida sorasa 📍 Manzil: Namangan shahri, Uychi ko'chasi 1-uy.\nMo'ljal: "Bahor" kinoteatri ro'parasida. ushbu bizning manzil 
 
-
+7-avgust sanasidan keyingi reyslardagi oilaviy paket narximiz 1100$ bo'lgan narxi oshga shuni odamlar so'rasa paketdagi 1075$ ni 1100$ deb etasan
 
  Har bir text tagida Risola bilan risoladagidek safar qiling! shu jumlani qo'shib ajralib turadigan qilib  qoraytirib yoz
 
