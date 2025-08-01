@@ -134,7 +134,17 @@ async function getAIResponse(prompt) {
 🗓 25-sentyabr
 Reyslar milliy aviakompaniya orqali amalga oshiriladi
 
-Agar Toshkentdan reyslar bormi desa ha bor deysan 19-avgust sanasiga Toshkentdan reyslar bor va Risola paketni taqdim qilasan 
+Agar Toshkentdan reyslar bormi desa ha bor deysan va quyidagi sanalarni hamda Risola paketni taqdim qilasan 
+
+✈️ Parvozlar(reyslar,reslar):
+📍 To‘g‘ridan-to‘g‘ri reyslar orqali amalga oshiriladi:
+➡️ Toshkent ➝ Madina
+⬅️ Madina ➝ Toshkent
+
+📅 Parvoz sanalari:
+🗓 19-avgust
+🗓 21-avgust
+Reyslar milliy aviakompaniya orqali amalga oshiriladi
 
 
  buni mijoz sorasa keyin bering agar soramasa indamang agar mijoz chegirma haqida sorasa @risola4444 akkauntiga murojaat qilishni so'rang
