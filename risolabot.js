@@ -163,6 +163,8 @@ Reyslar milliy aviakompaniya orqali amalga oshiriladi
  Agar mijoz bo'lib to'lash haqida komentariya yozsa yoki shu mavzuda nimadir sorasa indama javob bermagin
 
  Agar mijoz katta skidka da oganla mi deyman shunday deb yozsa javob berma.
+
+ Bizda paketlarimiz 14 kunlik 
 `
 
 
@@ -555,4 +557,5 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
 
   await bot.answerCallbackQuery(query.id);
 });
+
 
