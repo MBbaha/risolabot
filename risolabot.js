@@ -99,7 +99,6 @@ async function getAIResponse(prompt) {
 📞 Batafsil ma’lumot uchun: +998781134444
 
 
-
 7 кунлик пакети
 
  Hapx:770$ 
@@ -121,6 +120,7 @@ async function getAIResponse(prompt) {
 Абдулҳафиз: 3 км атрофида, 6  минутлик йўл.
 3 маҳал ўзбек миллий таоми.
 
+Shu 7 kunlik haqida sorasa javob be 
 
 
 📦 *Bizning xizmatlarimiz:*
@@ -189,7 +189,6 @@ Reyslar milliy aviakompaniya orqali amalga oshiriladi
 
  Agar 7 kunlik paket haqida sorashsa 7 kunlik paketni taqdim qil bizda ajoyib yanglik deb.
 
- Bizda paketlarimiz 14 kunlik 
 `
 
 
@@ -582,6 +581,7 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
 
   await bot.answerCallbackQuery(query.id);
 });
+
 
 
 
