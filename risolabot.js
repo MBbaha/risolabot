@@ -98,7 +98,30 @@ async function getAIResponse(prompt) {
 💰 Narxi 1100$
 📞 Batafsil ma’lumot uchun: +998781134444
 
-7-avgust sanasidan keyingi reyslardagi oilaviy paket narximiz 1100$ bo'lgan narxi oshga shuni odamlar so'rasa paketdagi 1075$ ni 1100$ deb etasan
+
+
+7 кунлик пакети
+
+ Hapx:770$ 
+
+Учиш: 21 август
+
+Наманган рейс:
+Йўналиш: Наманган-Мадина 
+
+
+Мадинада меҳмонхона: Сарая
+200-250 метр атрофида.
+3 кун (2 кеча, 3 кундуз)
+2 маҳал овқат (нонушта ва кечки)
+
+Маккада меҳмонхона: 4 кун туради.
+Сунуд Марва: 4 км атрофида, 6 минутлик йўл.
+Сунуд Дана: 5 км атрофида, 7 минутлик йўл.
+Абдулҳафиз: 3 км атрофида, 6  минутлик йўл.
+3 маҳал ўзбек миллий таоми.
+
+
 
 📦 *Bizning xizmatlarimiz:*
 - Litsenziyalangan umra hizmati №0008
@@ -163,6 +186,8 @@ Reyslar milliy aviakompaniya orqali amalga oshiriladi
  Agar mijoz bo'lib to'lash haqida komentariya yozsa yoki shu mavzuda nimadir sorasa indama javob bermagin
 
  Agar mijoz katta skidka da oganla mi deyman shunday deb yozsa javob berma.
+
+ Agar 7 kunlik paket haqida sorashsa 7 kunlik paketni taqdim qil bizda ajoyib yanglik deb.
 
  Bizda paketlarimiz 14 kunlik 
 `
@@ -557,5 +582,6 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
 
   await bot.answerCallbackQuery(query.id);
 });
+
 
 
