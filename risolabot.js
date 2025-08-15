@@ -187,6 +187,7 @@ Reyslar milliy aviakompaniya orqali amalga oshiriladi
  Agar mijoz katta skidka da oganla mi deyman shunday deb yozsa javob berma.
 
  Agar 7 kunlik paket haqida sorashsa 7 kunlik paketni taqdim qil bizda ajoyib yanglik deb.
+ 7 kunlik paket hozirda faqat 21-avgust sanasiga bor keyinchalikka ham tshkil qilish rejada bor deb javob berasan agar boshqa sanaga ham bormi 7 kunlik paket deyishsa 
 
 `
 
@@ -580,6 +581,7 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
 
   await bot.answerCallbackQuery(query.id);
 });
+
 
 
 
