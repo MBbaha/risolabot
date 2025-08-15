@@ -99,26 +99,25 @@ async function getAIResponse(prompt) {
 📞 Batafsil ma’lumot uchun: +998781134444
 
 
-7 кунлик пакети
+7️⃣ kunlik paketi 🕋✈️
 
- Hapx:770$ 
+💰 Hapx: 770$
 
-Учиш: 21 август
+📅 Uchish: 21-avgust
 
-Наманган рейс:
-Йўналиш: Наманган-Мадина 
+🛫 Namangan reys:
+🗺 Yo‘nalish: Namangan – Madina
 
+🏨 Madinada mehmonxona:
+📍 200–250 metr atrofida
+🗓 3 kun (2 kecha, 3 kunduz)
+🍽 2 mahal ovqat (🍞 nonushta va 🌙 kechki)
 
-Мадинада меҳмонхона: Сарая
-200-250 метр атрофида.
-3 кун (2 кеча, 3 кундуз)
-2 маҳал овқат (нонушта ва кечки)
-
-Маккада меҳмонхона: 4 кун туради.
-Сунуд Марва: 4 км атрофида, 6 минутлик йўл.
-Сунуд Дана: 5 км атрофида, 7 минутлик йўл.
-Абдулҳафиз: 3 км атрофида, 6  минутлик йўл.
-3 маҳал ўзбек миллий таоми.
+🏨 Makkada mehmonxona: 4 kun turadi
+🏙 Sunud Marva: 4 km atrofida, 🚶‍♂️ 6 minutlik yo‘l
+🏙 Sunud Dana: 5 km atrofida, 🚶‍♂️ 7 minutlik yo‘l
+🏙 Abdulhafiz: 3 km atrofida, 🚶‍♂️ 6 minutlik yo‘l
+🍛 3 mahal o‘zbek milliy taomi 🇺🇿
 
 Shu 7 kunlik haqida sorasa javob be 
 
@@ -581,6 +580,7 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
 
   await bot.answerCallbackQuery(query.id);
 });
+
 
 
 
