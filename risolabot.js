@@ -515,5 +515,4 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
   // }
 
   await bot.answerCallbackQuery(query.id);
-});
-
+});  
