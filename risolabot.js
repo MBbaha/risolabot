@@ -223,7 +223,7 @@ bot.on('message', async (msg) => {
   // 🔹 Kanal kommentariyasiga AI javob
   if (
     msg.chat.type === 'supergroup' &&
-    // msg.reply_to_message &&
+    msg.reply_to_message &&
     msg.reply_to_message.sender_chat
   ) {
     try {
@@ -516,3 +516,4 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
 
   await bot.answerCallbackQuery(query.id);
 });
+
