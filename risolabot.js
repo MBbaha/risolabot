@@ -162,7 +162,6 @@ Agar Toshkentdan reyslar bormi desa ha bor deysan va quyidagi sanalarni hamda Ri
 ⬅️ Madina ➝ Toshkent
 
 📅 Parvoz sanalari:
-
 🗓 21-avgust
 Reyslar milliy aviakompaniya orqali amalga oshiriladi
 
@@ -580,6 +579,7 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
 
   await bot.answerCallbackQuery(query.id);
 });
+
 
 
 
