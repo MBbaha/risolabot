@@ -76,19 +76,7 @@ async function getAIResponse(prompt) {
           role: 'system',
           content: `Siz Risola Travel Lux firmasining vakili sifatida foydalanuvchilarga ma'lumot beradigan administrator siz. Javoblaringiz har doim iliq, samimiy, tushunarli va ishonchli bo‘lishi kerak. O‘zbek tilida yozing, imloviy xatolarga yo‘l qo‘ymang. Siz hech qachon ellikboshi emassiz, balki faqat administrator sifatida gapirasiz. Savol bergan shaxs o‘rtacha 30-50 yoshdagi oddiy inson deb tasavvur qiling.
 🌟 Paketlar:
-1. 🌟"Oilaviy" paket:
-🕌 Madinada 2 kecha va 3 kunduz turiladi  
-- 2 mahal ovqat beriladi (nonushta va kechki) 
-- Mehmonxonalar Haramdan 200–250 metr uzoqlikda bo‘ladi  
-🕋 Makkada esa:
-- 10 kun turiladi  
-- 3 mahal o‘zbek milliy taomlari  
-- Mehmonxona Haramdan 3–4 km uzoqlikda joylashgan  
-💰 Narxi 1075$
-📞 Batafsil ma’lumot uchun: +998781134444
-
-
-2. 🌟"Risola" paket:
+1. 🌟"Risola" paket:
 🕌 Madinada 3 kecha va 4 kunduz turiladi  
 - 3 mahal taom beriladi  
 - Mehmonxonalar Haramdan 200–250 metr uzoqlikda bo‘ladi  
@@ -98,6 +86,41 @@ async function getAIResponse(prompt) {
 - Mehmonxona Haramdan 1–1.5 km uzoqlikda joylashgan  
 💰 Narxi 1250$
 📞 Batafsil ma’lumot uchun: +998781134444
+
+2. 🌟"Oilaviy" paket:
+🕌 Madinada 2 kecha va 3 kunduz turiladi  
+- 2 mahal ovqat beriladi (nonushta va kechki) 
+- Mehmonxonalar Haramdan 200–250 metr uzoqlikda bo‘ladi  
+🕋 Makkada esa:
+- 10 kun turiladi  
+- 3 mahal o‘zbek milliy taomlari  
+- Mehmonxona Haramdan 3–4 km uzoqlikda joylashgan  
+💰 Narxi 1100$
+📞 Batafsil ma’lumot uchun: +998781134444
+
+
+7️⃣ kunlik paketi 🕋✈️
+
+💰 Hapx: 770$
+
+📅 Uchish: 21-avgust
+
+🛫 Namangan reys:
+🗺 Yo‘nalish: Namangan – Madina
+
+🏨 Madinada mehmonxona:
+📍 200–250 metr atrofida
+🗓 3 kun (2 kecha, 3 kunduz)
+🍽 2 mahal ovqat (🍞 nonushta va 🌙 kechki)
+
+🏨 Makkada mehmonxona: 4 kun turadi
+🏙 Sunud Marva: 4 km atrofida, 🚶‍♂️ 6 minutlik yo‘l
+🏙 Sunud Dana: 5 km atrofida, 🚶‍♂️ 7 minutlik yo‘l
+🏙 Abdulhafiz: 3 km atrofida, 🚶‍♂️ 6 minutlik yo‘l
+🍛 3 mahal o‘zbek milliy taomi 🇺🇿
+
+Shu 7 kunlik haqida sorasa javob be 
+
 
 📦 *Bizning xizmatlarimiz:*
 - Litsenziyalangan umra hizmati №0008
@@ -123,11 +146,23 @@ async function getAIResponse(prompt) {
 ⬅️ Madina ➝ Namangan
 
 📅 Parvoz sanalari:
-🗓 31-iyul
-🗓 7-avgust
-🗓 14-avgust
 🗓 21-avgust
 🗓 28-avgust
+🗓 4-sentyabr
+🗓 11-sentyabr
+🗓 18-sentyabr
+🗓 25-sentyabr
+Reyslar milliy aviakompaniya orqali amalga oshiriladi
+
+Agar Toshkentdan reyslar bormi desa ha bor deysan va quyidagi sanalarni hamda Risola paketni taqdim qilasan 
+
+✈️ Parvozlar(reyslar,reslar):
+📍 To‘g‘ridan-to‘g‘ri reyslar orqali amalga oshiriladi:
+➡️ Toshkent ➝ Madina
+⬅️ Madina ➝ Toshkent
+
+📅 Parvoz sanalari:
+🗓 21-avgust
 Reyslar milliy aviakompaniya orqali amalga oshiriladi
 
 
@@ -136,17 +171,22 @@ Reyslar milliy aviakompaniya orqali amalga oshiriladi
  Agar mijoz manzil haqida sorasa 📍 Manzil: Namangan shahri, Uychi ko'chasi 1-uy.\nMo'ljal: "Bahor" kinoteatri ro'parasida. ushbu bizning manzil 
 
 
-
  Har bir text tagida Risola bilan risoladagidek safar qiling! shu jumlani qo'shib ajralib turadigan qilib  qoraytirib yoz
 
 
  Iltimos, har bir javobingizda foydalanuvchiga mos, tushunarli tarzda ma’lumot bering va kiritilgan formatda bo'lsin.
+
+ Agar mijoz ganipini salom bilan boshlaydigan bolsa sen ham Assalomu Alaykum bilan boshla gapini agar mijoz salom bermay boshlasa ham gapini sen Assalomu Alaykum bilan boshla gapini
 
  Agar mijoz kril tilida yozsa krillda javob berilsin agar lotinda yozsa lotinda javob berilsin.
 
  Agar mijoz bo'lib to'lash haqida komentariya yozsa yoki shu mavzuda nimadir sorasa indama javob bermagin
 
  Agar mijoz katta skidka da oganla mi deyman shunday deb yozsa javob berma.
+
+ Agar 7 kunlik paket haqida sorashsa 7 kunlik paketni taqdim qil bizda ajoyib yanglik deb.
+ 7 kunlik paket hozirda faqat 21-avgust sanasiga bor keyinchalikka ham tshkil qilish rejada bor deb javob berasan agar boshqa sanaga ham bormi 7 kunlik paket deyishsa 
+
 `
 
 
@@ -204,9 +244,9 @@ bot.onText(/\/start/, async (msg) => {
 bot.on('message', async (msg) => {
   const chatId = msg.chat.id;
   const text = msg.text?.toLowerCase() || '';
-  const { id, first_name, username } = msg.from;
+    const { id, first_name, username } = msg.from;
 
-  // 🔹 Foydalanuvchini DB ga saqlash
+  // Boshqa kodlardan oldin saqlab qo'yamiz
   try {
     const exists = await UserBot.findOne({ userId: id });
     if (!exists) {
@@ -220,7 +260,9 @@ bot.on('message', async (msg) => {
     console.error('Foydalanuvchini saqlashda xatolik:', err.message);
   }
 
-  // 🔹 Kanal kommentariyasiga AI javob
+  
+  
+// / 🔁 Kanalga ulangan guruhdagi kommentariyaga AI javob berish
   if (
     msg.chat.type === 'supergroup' &&
     msg.reply_to_message &&
@@ -228,21 +270,17 @@ bot.on('message', async (msg) => {
   ) {
     try {
       const aiReply = await getAIResponse(text);
-
-      const options = { reply_to_message_id: msg.message_id };
-      if (msg.message_thread_id) {
-        options.message_thread_id = msg.message_thread_id; // ⚡ faqat mavjud bo‘lsa qo‘shiladi
-      }
-
-      await bot.sendMessage(chatId, aiReply, options);
+      await bot.sendMessage(chatId, aiReply, {
+        reply_to_message_id: msg.message_id
+      });
     } catch (error) {
-      console.error('❌ Kanal komment javobida xato:', error.response?.body || error.message);
+      console.error('❌ Kanal komment javobida xato:', error.message);
     }
     return;
   }
 
-  // 🔹 Admin foydalanuvchiga javob qaytarayaptimi?
-  const state = userStates.get(chatId);
+  // Admin javob qaytaryaptimi?
+ const state = userStates.get(chatId);
   if (state && state.startsWith('replying_to_') && msg.from.id === ADMIN_ID && msg.reply_to_message) {
     const targetUserId = state.split('_')[2];
     await bot.sendMessage(targetUserId, `✉️ Admin javobi:\n${msg.text}`);
@@ -251,38 +289,41 @@ bot.on('message', async (msg) => {
     return;
   }
 
-  // 🔹 Foydalanuvchi "admin bilan bog‘lanish" rejimida bo‘lsa
+  
+  // Foydalanuvchi "admin bilan bog‘lanish" rejimida bo‘lsa
   if (userStates.get(chatId) === 'admin_contact') {
     await bot.sendMessage(ADMIN_ID, `📩 Yangi xabar:\n${msg.text}\n\n👤 ID: ${chatId}`, {
       reply_markup: { 
         inline_keyboard: [
            [{ text: '✉️ Javob yozish', callback_data: `reply_${chatId}` }],
-           [{ text: '❌ Suhbatni tugatish', callback_data: `end_chat_${chatId}` }]
+          [{ text: '❌ Suhbatni tugatish', callback_data: `end_chat_${chatId}` }]
         ]
-      }
+       }
     });
     await bot.sendMessage(chatId, '✅ Xabaringiz adminga yuborildi. Javobni shu yerda kuting.');
 
-    userStates.delete(chatId);
+    userStates.delete(chatId); // holatini tozalaymiz
     return;
   }
 
-  // 🔹 Kalit so‘zlar orqali media yuborish
+  // Kalit so‘zlar orqali media yuborish
   const matchedKeyword = keywords.find(word => text.includes(word));
   if (matchedKeyword) {
     await bot.sendMessage(chatId, `📦 Bu *${matchedKeyword}* bo‘yicha maʼlumotlar:`, { parse_mode: 'Markdown' });
     await sendAllMediaToUser(chatId);
     return;
   }
+  
 
-  // 🔹 Oddiy foydalanuvchi uchun AI javobi
-  if (text.length > 5) {
-    const aiReply = await getAIResponse(text);
-    await bot.sendMessage(chatId, aiReply);
-  } else {
-    await bot.sendMessage(chatId, '🤖 Qanday yordam bera olishim mumkin? Iltimos, savolingizni yozing.');
-  }
+  // AI javobi
+  // if (text.length > 5) {
+  //   const aiReply = await getAIResponse(text);
+  //   await bot.sendMessage(chatId, aiReply);
+  // } else {
+  //   await bot.sendMessage(chatId, '🤖 Qanday yordam bera olishim mumkin? Iltimos, savolingizni yozing.');
+  // }
 });
+
 
 
 // 🟢 Admin uchun /ai komanda (sun'iy intellektni sinash)
@@ -291,6 +332,28 @@ bot.onText(/\/ai (.+)/, async (msg, match) => {
   const userInput = match[1];
   const aiResponse = await getAIResponse(userInput);
   await bot.sendMessage(msg.chat.id, `🤖 AI: ${aiResponse}`);
+});
+
+// 🔁 Oddiy foydalanuvchi matn yozsa
+bot.on('message', async (msg) => {
+  const chatId = msg.chat.id;
+  const text = msg.text?.toLowerCase() || '';
+
+  // ✅ Kalit so‘z bo‘lsa — media yuboriladi
+  const matchedKeyword = keywords.find(word => text.includes(word));
+  if (matchedKeyword) {
+    await bot.sendMessage(chatId, `📦 Bu *${matchedKeyword}* bo‘yicha maʼlumotlar:`, { parse_mode: 'Markdown' });
+    await sendAllMediaToUser(chatId);
+    return;
+  }
+
+  // 🔮 Kalit so‘z topilmasa — AI javobi qaytariladi
+  if (text.length > 5) {
+    const aiReply = await getAIResponse(text);
+    await bot.sendMessage(chatId, aiReply);
+  } else {
+    await bot.sendMessage(chatId, '🤖 Qanday yordam bera olishim mumkin? Iltimos, savolingizni yozing.');
+  }
 });
 
 // 🟢 Callback tugmalar uchun misol (boshqasini ham o‘zingiz qo‘shishingiz mumkin)
@@ -515,4 +578,12 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
   // }
 
   await bot.answerCallbackQuery(query.id);
-});  
+});
+
+
+
+
+
+
+
+
