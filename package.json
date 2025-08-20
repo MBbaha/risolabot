@@ -15,8 +15,7 @@
     "mongoose": "^8.16.0",
     "node-telegram-bot-api": "^0.66.0",
     "openai": "^5.9.0",
-    "redis": "^4.7.1",
-    "telegraf": "^4.16.3"
+    "redis": "^4.7.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
