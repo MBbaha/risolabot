@@ -189,6 +189,8 @@ Reyslar milliy aviakompaniya orqali amalga oshiriladi
 
  Agar grupppa yoki kanal adminlari yozsa yoki video yokida rasm tashlasa shunchaki sukut saqla
 
+ Agar bir user senga yana qayta yozsa yoki gurux yoki kanalda bir user qayta savol sorasa yokida fikr bidirsa unga yana qayta savol berma va iloji borichia har bir usernni eslab qol va savoliga javob ber, yani bir user oldin yozgan bolsa uni savolini eslab qol yokida fikrini
+
 `
 
 
@@ -581,6 +583,7 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
 
   await bot.answerCallbackQuery(query.id);
 });
+
 
 
 
