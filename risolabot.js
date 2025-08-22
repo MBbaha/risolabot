@@ -99,11 +99,11 @@ async function getAIResponse(prompt) {
 📞 Batafsil ma’lumot uchun: +998781134444
 
 
-7️⃣ kunlik paketi 🕋✈️
+6 kunlik paketi 🕋✈️
 
-💰 Hapx: 770$
+💰 Hapx: 750$
 
-📅 Uchish: 21-avgust
+📅 Uchish: 28-avgust
 
 🛫 Namangan reys:
 🗺 Yo‘nalish: Namangan – Madina
@@ -113,13 +113,13 @@ async function getAIResponse(prompt) {
 🗓 3 kun (2 kecha, 3 kunduz)
 🍽 2 mahal ovqat (🍞 nonushta va 🌙 kechki)
 
-🏨 Makkada mehmonxona: 4 kun turadi
+🏨 Makkada mehmonxona: 3 kun turadi
 🏙 Sunud Marva: 4 km atrofida, 🚶‍♂️ 6 minutlik yo‘l
 🏙 Sunud Dana: 5 km atrofida, 🚶‍♂️ 7 minutlik yo‘l
 🏙 Abdulhafiz: 3 km atrofida, 🚶‍♂️ 6 minutlik yo‘l
 🍛 3 mahal o‘zbek milliy taomi 🇺🇿
 
-Shu 7 kunlik haqida sorasa javob be 
+Shu 6 kunlik haqida sorasa javob ber
 
 
 📦 *Bizning xizmatlarimiz:*
@@ -156,14 +156,6 @@ Reyslar milliy aviakompaniya orqali amalga oshiriladi
 
 Agar Toshkentdan reyslar bormi desa ha bor deysan va quyidagi sanalarni hamda Risola paketni taqdim qilasan 
 
-✈️ Parvozlar(reyslar,reslar):
-📍 To‘g‘ridan-to‘g‘ri reyslar orqali amalga oshiriladi:
-➡️ Toshkent ➝ Madina
-⬅️ Madina ➝ Toshkent
-
-📅 Parvoz sanalari:
-🗓 21-avgust
-Reyslar milliy aviakompaniya orqali amalga oshiriladi
 
 
  buni mijoz sorasa keyin bering agar soramasa indamang agar mijoz chegirma haqida sorasa @risola4444 akkauntiga murojaat qilishni so'rang
@@ -184,8 +176,8 @@ Reyslar milliy aviakompaniya orqali amalga oshiriladi
 
  Agar mijoz katta skidka da oganla mi deyman shunday deb yozsa javob berma.
 
- Agar 7 kunlik paket haqida sorashsa 7 kunlik paketni taqdim qil bizda ajoyib yanglik deb.
- 7 kunlik paket hozirda faqat 21-avgust sanasiga bor keyinchalikka ham tshkil qilish rejada bor deb javob berasan agar boshqa sanaga ham bormi 7 kunlik paket deyishsa 
+ Agar 6 kunlik paket haqida sorashsa 6 kunlik paketni taqdim qil bizda ajoyib yanglik deb.
+ 6 kunlik paket hozirda faqat 28-avgust sanasiga bor keyinchalikka ham tshkil qilish rejada bor deb javob berasan agar boshqa sanaga ham bormi 6 kunlik paket deyishsa 
 
  Agar grupppa yoki kanal adminlari yozsa yoki video yokida rasm tashlasa shunchaki sukut saqla
 
@@ -583,6 +575,7 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
 
   await bot.answerCallbackQuery(query.id);
 });
+
 
 
 
