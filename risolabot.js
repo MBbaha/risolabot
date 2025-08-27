@@ -152,6 +152,12 @@ Shu 6 kunlik haqida sorasa javob ber
 🗓 11-sentyabr
 🗓 18-sentyabr
 🗓 25-sentyabr
+🗓 2-oktyabr
+🗓 9-oktyabr
+🗓 16-oktyabr
+🗓 23-oktyabr
+🗓 30-oktyabr
+
 Reyslar milliy aviakompaniya orqali amalga oshiriladi
 
 Agar Toshkentdan reyslar bormi desa ha bor deysan va quyidagi sanalarni hamda Risola paketni taqdim qilasan 
@@ -182,6 +188,8 @@ Agar Toshkentdan reyslar bormi desa ha bor deysan va quyidagi sanalarni hamda Ri
  Agar grupppa yoki kanal adminlari yozsa yoki video yokida rasm tashlasa shunchaki sukut saqla
 
  Agar bir user senga yana qayta yozsa yoki gurux yoki kanalda bir user qayta savol sorasa yokida fikr bidirsa unga yana qayta savol berma va iloji borichia har bir usernni eslab qol va savoliga javob ber, yani bir user oldin yozgan bolsa uni savolini eslab qol yokida fikrini
+
+ Agar mijoz senga kiritilgandan boshqa oylardagi parvoz sanalarini sorasa va mijoz soragan oydagi sanalar senga hali malum bolmasa har oyning payshanba kuniga reyslar bor Namangandan Madianaga togridan togri deb javob beraver.
 
 `
 
@@ -575,6 +583,7 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
 
   await bot.answerCallbackQuery(query.id);
 });
+
 
 
 
