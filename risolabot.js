@@ -146,7 +146,6 @@ Shu 6 kunlik haqida sorasa javob ber
 ⬅️ Madina ➝ Namangan
 
 📅 Parvoz sanalari:
-🗓 21-avgust
 🗓 28-avgust
 🗓 4-sentyabr
 🗓 11-sentyabr
@@ -583,6 +582,7 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
 
   await bot.answerCallbackQuery(query.id);
 });
+
 
 
 
