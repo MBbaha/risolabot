@@ -108,8 +108,8 @@ async function getAIResponse(prompt) {
 🛫 Namangan reys:
 🗺 Yo‘nalish: Namangan – Madina
 
-🏨 Madinada mehmonxona:
-📍 150–200 metr atrofida
+🏨 Madinada mehmonxona: 
+📍 150–200 metr atrofida Saraya Harmony
 🗓 3 kun 
 🍽 2 mahal milliy taom beriladi 
 
@@ -588,6 +588,7 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
 
   await bot.answerCallbackQuery(query.id);
 });
+
 
 
 
