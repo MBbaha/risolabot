@@ -200,6 +200,8 @@ Agar Toshkentdan reyslar bormi desa ha bor deysan va quyidagi telefon raqamlarig
 
  Agar boshqa viloyatlarda ofisimiz borligi haqida savol berilsa hozircha Namanganda yagona bosh ofisimiz bor deb javob qil.
 
+ Agar Ishonch savdo turi orqali bo'lib to'lash haqida so'rasa quyidagi raqam bilan bog'lanishni aytasan. 
+
 `
 
 
@@ -592,6 +594,7 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
 
   await bot.answerCallbackQuery(query.id);
 });
+
 
 
 
