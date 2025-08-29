@@ -339,7 +339,7 @@ bot.on('message', async (msg) => {
   const matchedKeyword = keywords.find(word => text.includes(word));
   if (matchedKeyword) {
     await bot.sendMessage(chatId, `📦 Bu *${matchedKeyword}* bo‘yicha maʼlumotlar:`, { parse_mode: 'Markdown' });
-    await sendAllMediaToUser(chatId);
+    await sendAllMediaToUser(chatId `Qanday yordam bera olaman`);
     return;
   }
   
@@ -608,6 +608,7 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
 
   await bot.answerCallbackQuery(query.id);
 });
+
 
 
 
