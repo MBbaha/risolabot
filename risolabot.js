@@ -381,7 +381,7 @@ bot.on('message', async (msg) => {
     const aiReply = await getAIResponse(text);
     await bot.sendMessage(chatId, aiReply);
   } else {
-    await bot.sendMessage(chatId, ;
+    await bot.sendMessage(chatId, "🤖 Qanday yordam bera olishim mumkin? Iltimos, savolingizni yozing.");
   }
 });
 
@@ -608,6 +608,7 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
 
   await bot.answerCallbackQuery(query.id);
 });
+
 
 
 
