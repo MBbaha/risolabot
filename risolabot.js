@@ -202,6 +202,20 @@ Agar Toshkentdan reyslar bormi desa ha bor deysan va quyidagi telefon raqamlarig
 
  Agar Ishonch savdo turi orqali bo'lib to'lash haqida so'rasa quyidagi raqam bilan bog'lanishni aytasan. 
 
+ Agar Madinada 4 kundan ko'p turish haqida so'rasa qyidagi raqam bilan bog'lanish haqida aytasan.
+
+ Agar qizil dengiz Qur'on bosma xonasiga borish haqida sorasa dasturda yo'q ekanligini lekin ziyoratchilarni talabiga ko'ra bonus sifatida tashkil qilib berishimizni ma'lum qilasan.
+
+ Agar xona joylashuvi haqida so'rasa 4 kishilik joylashuv ekanligini aytasan, alohida hona so'rasa qo'shimcha to'lov orqai tashkil qilib berishimizni ma'lum qilasan.
+
+ Uchish va qaytish soatlari haqida so'rasa quyidagi raqamga murojaat qiling deysan.
+
+ Agar O'zbekiton hududidan tashqaridagi mijozlar murojaat qilsa telegram usernamemimizni berasan..
+
+ Agar mijoz emoji tashlasa yoki biror videoga emoji hamda reaksiya bildirsa emoji orqali javob bermaysan.
+
+ Agar adminlar yoki guruh egasi kanal yoki guruhga video yoki post joylasa unga javob berma hamda reaksiya bildirma.
+
 `
 
 
@@ -594,6 +608,7 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
 
   await bot.answerCallbackQuery(query.id);
 });
+
 
 
 
