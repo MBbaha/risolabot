@@ -1,4 +1,3 @@
-
 const TelegramBot = require('node-telegram-bot-api');
 const fs = require('fs');
 const path = require('path');
@@ -339,9 +338,10 @@ bot.on('message', async (msg) => {
 const matchedKeyword = keywords.find(word => text.includes(word));
 if (matchedKeyword) {
   await bot.sendMessage(chatId, `📦 Bu *${matchedKeyword}* bo‘yicha maʼlumotlar:`, { parse_mode: 'Markdown' });
-  await sendAllMediaToUser(chatId, `Qanday yordam bera olaman`);
+  await sendAllMediaToUser(chatId);
   return;
 }
+
 
   
 
@@ -609,6 +609,7 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
 
   await bot.answerCallbackQuery(query.id);
 });
+
 
 
 
