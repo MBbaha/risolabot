@@ -336,12 +336,13 @@ bot.on('message', async (msg) => {
   }
 
   // Kalit so‘zlar orqali media yuborish
-  const matchedKeyword = keywords.find(word => text.includes(word));
-  if (matchedKeyword) {
-    await bot.sendMessage(chatId, '📦 Bu *${matchedKeyword}* bo‘yicha maʼlumotlar:', { parse_mode: 'Markdown' });
-    await sendAllMediaToUser(chatId `Qanday yordam bera olaman`);
-    return;
-  }
+const matchedKeyword = keywords.find(word => text.includes(word));
+if (matchedKeyword) {
+  await bot.sendMessage(chatId, `📦 Bu *${matchedKeyword}* bo‘yicha maʼlumotlar:`, { parse_mode: 'Markdown' });
+  await sendAllMediaToUser(chatId, `Qanday yordam bera olaman`);
+  return;
+}
+
   
 
   // AI javobi
@@ -608,6 +609,7 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
 
   await bot.answerCallbackQuery(query.id);
 });
+
 
 
 
