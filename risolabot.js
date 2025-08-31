@@ -18,10 +18,6 @@ const userStates = new Map(); // <chatId, "admin_contact">
 const COMPANY_LAT = 41.00491343939893;
 const COMPANY_LNG = 71.68375613581506;
 
-
-
-
-
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('📦 MongoDB ulanildi'))
   .catch((err) => console.error('❌ MongoDB xatolik:', err.message));
@@ -608,32 +604,3 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
 
   await bot.answerCallbackQuery(query.id);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
