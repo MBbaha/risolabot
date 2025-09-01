@@ -338,9 +338,27 @@ bot.onText(/\/ai (.+)/, async (msg, match) => {
 });
 
 // 🔁 Oddiy foydalanuvchi matn yozsa
+// 🔁 Oddiy foydalanuvchi matn yozsa
 bot.on('message', async (msg) => {
   const chatId = msg.chat.id;
   const text = msg.text?.toLowerCase() || '';
+
+  // 🔄 Kanal kommentlariga AI javob
+  if (
+    msg.chat.type === 'supergroup' &&
+    msg.reply_to_message &&
+    msg.reply_to_message.sender_chat
+  ) {
+    try {
+      const aiReply = await getAIResponse(text);
+      await bot.sendMessage(chatId, aiReply, {
+        reply_to_message_id: msg.message_id
+      });
+    } catch (error) {
+      console.error('❌ Kanal komment javobida xato:', error.message);
+    }
+    return;
+  }
 
   // ✅ Kalit so‘z bo‘lsa — media yuboriladi
   const matchedKeyword = keywords.find(word => text.includes(word));
@@ -350,7 +368,7 @@ bot.on('message', async (msg) => {
     return;
   }
 
-  // 🔮 Kalit so‘z topilmasa — AI javobi qaytariladi
+  // 🔮 Kalit so‘z topilmasa — AI javobi
   if (text.length > 5) {
     const aiReply = await getAIResponse(text);
     await bot.sendMessage(chatId, aiReply);
@@ -358,6 +376,7 @@ bot.on('message', async (msg) => {
     await bot.sendMessage(chatId, "🤖 Qanday yordam bera olishim mumkin? Iltimos, savolingizni yozing.");
   }
 });
+
 
 
 
@@ -584,6 +603,7 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
 
   await bot.answerCallbackQuery(query.id);
 });
+
 
 
 
