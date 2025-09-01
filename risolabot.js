@@ -244,6 +244,7 @@ Agar Toshkentdan reyslar bormi desa ha bor deysan va quyidagi telefon raqamlarig
 const keywords = ['ovqat', 'sharoit',  'video', 'rasm',];
 
 // 🟢 /start komandasi
+// 🟢 /start komandasi
 bot.onText(/\/start/, async (msg) => {
   const chatId = msg.chat.id;
   const keyboard = [
@@ -263,23 +264,39 @@ bot.onText(/\/start/, async (msg) => {
     reply_markup: { inline_keyboard: keyboard }
   });
 });
-  
-// / 🔁 Kanalga ulangan guruhdagi kommentariyaga AI javob berish
+
+
+// 🔁 Har qanday xabarni tutish
+bot.on("message", async (msg) => {
+  const chatId = msg.chat.id;
+  const text = msg.text?.toLowerCase() || "";
+
+  // 🔁 Kanal kommentariyasiga AI javob berish
   if (
-    msg.chat.type === 'supergroup' &&
+    msg.chat.type === "supergroup" &&
     msg.reply_to_message &&
     msg.reply_to_message.sender_chat
   ) {
     try {
       const aiReply = await getAIResponse(text);
       await bot.sendMessage(chatId, aiReply, {
-        reply_to_message_id: msg.message_id
+        reply_to_message_id: msg.message_id,
       });
     } catch (error) {
-      console.error('❌ Kanal komment javobida xato:', error.message);
+      console.error("❌ Kanal komment javobida xato:", error.message);
     }
     return;
   }
+
+  // 🔮 Boshqa oddiy foydalanuvchi xabariga ishlov berish
+  if (text.length > 5) {
+    const aiReply = await getAIResponse(text);
+    await bot.sendMessage(chatId, aiReply);
+  } else {
+    await bot.sendMessage(chatId, "🤖 Savolingizni aniqroq yozing.");
+  }
+});
+
 
   // Admin javob qaytaryaptimi?
  const state = userStates.get(chatId);
@@ -590,6 +607,7 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
 
   await bot.answerCallbackQuery(query.id);
 });
+
 
 
 
