@@ -340,13 +340,13 @@ if (matchedKeyword) {
 
   
 
-  // AI javobi
-  // if (text.length > 5) {
-  //   const aiReply = await getAIResponse(text);
-  //   await bot.sendMessage(chatId, aiReply);
-  // } else {
-  //   await bot.sendMessage(chatId, '🤖 Qanday yordam bera olishim mumkin? Iltimos, savolingizni yozing.');
-  // }
+  AI javobi
+  if (text.length > 5) {
+    const aiReply = await getAIResponse(text);
+    await bot.sendMessage(chatId, aiReply);
+  } else {
+    await bot.sendMessage(chatId, '🤖 Qanday yordam bera olishim mumkin? Iltimos, savolingizni yozing.');
+  }
 });
 
 
@@ -380,6 +380,7 @@ bot.on('message', async (msg) => {
     await bot.sendMessage(chatId, "🤖 Qanday yordam bera olishim mumkin? Iltimos, savolingizni yozing.");
   }
 });
+
 
 // 🟢 Callback tugmalar uchun misol (boshqasini ham o‘zingiz qo‘shishingiz mumkin)
 bot.on('callback_query', async (query) => {
@@ -604,5 +605,6 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
 
   await bot.answerCallbackQuery(query.id);
 });
+
 
 
