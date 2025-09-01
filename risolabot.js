@@ -293,16 +293,6 @@ bot.on('message', async (msg) => {
     return;
   }
 
-  // Kalit so‘zlar orqali media yuborish
-const matchedKeyword = keywords.find(word => text.includes(word));
-if (matchedKeyword) {
-  await bot.sendMessage(chatId, `🤖 Qanday yordam bera olishim mumkin?`, { parse_mode: 'Markdown' });
-  return;
-}
-
-
-  
-
   // AI javobi
   // if (text.length > 5) {
   //   const aiReply = await getAIResponse(text);
@@ -567,6 +557,7 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
 
   await bot.answerCallbackQuery(query.id);
 });
+
 
 
 
