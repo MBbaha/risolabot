@@ -109,9 +109,9 @@ async function getAIResponse(prompt) {
 🍽 2 mahal milliy taom beriladi 
 
 🏨 Makkada mehmonxona: 3 kun turadi
-🏙 Sunud Marva: 3 km atrofida, 🚶‍♂️ 4 minutlik yo‘l
-🏙 Sunud Dana: 5 km atrofida, 🚶‍♂️ 5 minutlik yo‘l
-🏙 Abdulhafiz: 3 km atrofida, 🚶‍♂️ 6 minutlik yo‘l
+🏙 Sunud Marva: 3 km atrofida, 🚶♂️ 4 minutlik yo‘l
+🏙 Sunud Dana: 5 km atrofida, 🚶♂️ 5 minutlik yo‘l
+🏙 Abdulhafiz: 3 km atrofida, 🚶♂️ 6 minutlik yo‘l
 🍛 3 mahal o‘zbek milliy taomi 
 
 Shu 6 kunlik haqida sorasa javob ber
@@ -264,7 +264,7 @@ bot.onText(/\/start/, async (msg) => {
   });
 });
 
-// 🔁 Har qanday xabarni qabul qilish
+// // 🔁 Har qanday xabarni qabul qilish
 // bot.on('message', async (msg) => {
 //   const chatId = msg.chat.id;
 //   const text = msg.text?.toLowerCase() || '';
@@ -360,49 +360,26 @@ bot.onText(/\/ai (.+)/, async (msg, match) => {
 });
 
 // 🔁 Oddiy foydalanuvchi matn yozsa
-bot.on("message", async (msg) => {
+bot.on('message', async (msg) => {
   const chatId = msg.chat.id;
-  const text = msg.text?.toLowerCase() || "";
-  const { id, first_name, username } = msg.from;
+  const text = msg.text?.toLowerCase() || '';
 
-  // 📝 1. Foydalanuvchini bazaga yozib qo‘yish
-  try {
-    const exists = await UserBot.findOne({ userId: id });
-    if (!exists) {
-      await UserBot.create({
-        userId: id,
-        firstName: first_name,
-        username: username,
-      });
-    }
-  } catch (err) {
-    console.error("❌ Foydalanuvchini saqlashda xatolik:", err.message);
-  }
-
-  // 🗂️ 2. Kalit so‘z bo‘lsa — media yuborish
-  const matchedKeyword = keywords.find((word) => text.includes(word));
+  // ✅ Kalit so‘z bo‘lsa — media yuboriladi
+  const matchedKeyword = keywords.find(word => text.includes(word));
   if (matchedKeyword) {
-    await bot.sendMessage(
-      chatId,
-      `📦 Bu *${matchedKeyword}* bo‘yicha maʼlumotlar:`,
-      { parse_mode: "Markdown" }
-    );
+    await bot.sendMessage(chatId, `📦 Bu *${matchedKeyword}* bo‘yicha maʼlumotlar:`, { parse_mode: 'Markdown' });
     await sendAllMediaToUser(chatId);
     return;
   }
 
-  // 🤖 3. Kalit so‘z topilmasa — AI javobi
+  // 🔮 Kalit so‘z topilmasa — AI javobi qaytariladi
   if (text.length > 5) {
     const aiReply = await getAIResponse(text);
     await bot.sendMessage(chatId, aiReply);
   } else {
-    await bot.sendMessage(
-      chatId,
-      "🤖 Qanday yordam bera olishim mumkin? Iltimos, savolingizni yozing."
-    );
+    await bot.sendMessage(chatId, "🤖 Qanday yordam bera olishim mumkin? Iltimos, savolingizni yozing.");
   }
 });
-
 
 // 🟢 Callback tugmalar uchun misol (boshqasini ham o‘zingiz qo‘shishingiz mumkin)
 bot.on('callback_query', async (query) => {
