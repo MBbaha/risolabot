@@ -22,13 +22,7 @@ mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('📦 MongoDB ulanildi'))
   .catch((err) => console.error('❌ MongoDB xatolik:', err.message));
 
-// 🔧 Fayl va media yordamchi funksiyalar
-function getFileType(filename) {
-  const ext = path.extname(filename).toLowerCase();
-  if (['.jpg', '.jpeg', '.png'].includes(ext)) return 'photo';
-  if (['.mp4', '.mov'].includes(ext)) return 'video';
-  return null;
-}
+
 
 
 // 📚 AI javob olish funksiyasi
@@ -210,8 +204,7 @@ Agar Toshkentdan reyslar bormi desa ha bor deysan va quyidagi telefon raqamlarig
 }
 
 
-// 🧠 Kalit so‘zlar ro‘yxati
-const keywords = ['ovqat', 'sharoit',  'video', 'rasm',];
+
 
 // 🟢 /start komandasi
 bot.onText(/\/start/, async (msg) => {
@@ -574,6 +567,7 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
 
   await bot.answerCallbackQuery(query.id);
 });
+
 
 
 
