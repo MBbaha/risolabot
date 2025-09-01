@@ -265,24 +265,24 @@ bot.onText(/\/start/, async (msg) => {
 });
 
 // 🔁 Har qanday xabarni qabul qilish
-// bot.on('message', async (msg) => {
-//   const chatId = msg.chat.id;
-//   const text = msg.text?.toLowerCase() || '';
-//     const { id, first_name, username } = msg.from;
+bot.on('message', async (msg) => {
+  const chatId = msg.chat.id;
+  const text = msg.text?.toLowerCase() || '';
+    const { id, first_name, username } = msg.from;
 
-//   // Boshqa kodlardan oldin saqlab qo'yamiz
-//   try {
-//     const exists = await UserBot.findOne({ userId: id });
-//     if (!exists) {
-//       await UserBot.create({
-//         userId: id,
-//         firstName: first_name,
-//         username: username
-//       });
-//     }
-//   } catch (err) {
-//     console.error('Foydalanuvchini saqlashda xatolik:', err.message);
-//   }
+  // Boshqa kodlardan oldin saqlab qo'yamiz
+  try {
+    const exists = await UserBot.findOne({ userId: id });
+    if (!exists) {
+      await UserBot.create({
+        userId: id,
+        firstName: first_name,
+        username: username
+      });
+    }
+  } catch (err) {
+    console.error('Foydalanuvchini saqlashda xatolik:', err.message);
+  }
 
   
   
@@ -340,13 +340,13 @@ if (matchedKeyword) {
 
   
 
-  AI javobi
-  if (text.length > 5) {
-    const aiReply = await getAIResponse(text);
-    await bot.sendMessage(chatId, aiReply);
-  } else {
-    await bot.sendMessage(chatId, '🤖 Qanday yordam bera olishim mumkin? Iltimos, savolingizni yozing.');
-  }
+  // AI javobi
+  // if (text.length > 5) {
+  //   const aiReply = await getAIResponse(text);
+  //   await bot.sendMessage(chatId, aiReply);
+  // } else {
+  //   await bot.sendMessage(chatId, '🤖 Qanday yordam bera olishim mumkin? Iltimos, savolingizni yozing.');
+  // }
 });
 
 
@@ -380,7 +380,6 @@ bot.on('message', async (msg) => {
     await bot.sendMessage(chatId, "🤖 Qanday yordam bera olishim mumkin? Iltimos, savolingizni yozing.");
   }
 });
-
 
 // 🟢 Callback tugmalar uchun misol (boshqasini ham o‘zingiz qo‘shishingiz mumkin)
 bot.on('callback_query', async (query) => {
@@ -605,6 +604,4 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
 
   await bot.answerCallbackQuery(query.id);
 });
-
-
 
