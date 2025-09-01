@@ -30,36 +30,6 @@ function getFileType(filename) {
   return null;
 }
 
-async function sendAllMediaToUser(userId) {
-  try {
-    const mediaDir = './media';
-    const files = fs.readdirSync(mediaDir);
-
-    const mediaItems = files.map(file => {
-      const type = getFileType(file);
-      if (!type) return null;
-
-      return {
-        type,
-        media: fs.readFileSync(path.join(mediaDir, file)),
-        caption: `📁 ${file}`
-      };
-    }).filter(Boolean);
-
-    if (mediaItems.length === 0) return bot.sendMessage(userId, '❗ Media topilmadi.');
-
-    const chunkSize = 10;
-    for (let i = 0; i < mediaItems.length; i += chunkSize) {
-      const chunk = mediaItems.slice(i, i + chunkSize);
-      await bot.sendMediaGroup(userId, chunk);
-    }
-
-    await bot.sendMessage(userId, '✅ Barcha media yuborildi.');
-  } catch (err) {
-    console.error('❌ Media yuborishda xato:', err.message);
-    await bot.sendMessage(userId, '❌ Media yuborishda xatolik yuz berdi.');
-  }
-}
 
 // 📚 AI javob olish funksiyasi
 async function getAIResponse(prompt) {
@@ -604,5 +574,6 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
 
   await bot.answerCallbackQuery(query.id);
 });
+
 
 
