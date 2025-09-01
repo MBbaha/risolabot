@@ -244,7 +244,6 @@ Agar Toshkentdan reyslar bormi desa ha bor deysan va quyidagi telefon raqamlarig
 const keywords = ['ovqat', 'sharoit',  'video', 'rasm',];
 
 // 🟢 /start komandasi
-// 🟢 /start komandasi
 bot.onText(/\/start/, async (msg) => {
   const chatId = msg.chat.id;
   const keyboard = [
@@ -265,38 +264,44 @@ bot.onText(/\/start/, async (msg) => {
   });
 });
 
-
-// 🔁 Har qanday xabarni tutish
-bot.on("message", async (msg) => {
+// 🔁 Har qanday xabarni qabul qilish
+bot.on('message', async (msg) => {
   const chatId = msg.chat.id;
-  const text = msg.text?.toLowerCase() || "";
+  const text = msg.text?.toLowerCase() || '';
+    const { id, first_name, username } = msg.from;
 
-  // 🔁 Kanal kommentariyasiga AI javob berish
+  // Boshqa kodlardan oldin saqlab qo'yamiz
+  try {
+    const exists = await UserBot.findOne({ userId: id });
+    if (!exists) {
+      await UserBot.create({
+        userId: id,
+        firstName: first_name,
+        username: username
+      });
+    }
+  } catch (err) {
+    console.error('Foydalanuvchini saqlashda xatolik:', err.message);
+  }
+
+  
+  
+// / 🔁 Kanalga ulangan guruhdagi kommentariyaga AI javob berish
   if (
-    msg.chat.type === "supergroup" &&
+    msg.chat.type === 'supergroup' &&
     msg.reply_to_message &&
     msg.reply_to_message.sender_chat
   ) {
     try {
       const aiReply = await getAIResponse(text);
       await bot.sendMessage(chatId, aiReply, {
-        reply_to_message_id: msg.message_id,
+        reply_to_message_id: msg.message_id
       });
     } catch (error) {
-      console.error("❌ Kanal komment javobida xato:", error.message);
+      console.error('❌ Kanal komment javobida xato:', error.message);
     }
     return;
   }
-
-  // 🔮 Boshqa oddiy foydalanuvchi xabariga ishlov berish
-  if (text.length > 5) {
-    const aiReply = await getAIResponse(text);
-    await bot.sendMessage(chatId, aiReply);
-  } else {
-    await bot.sendMessage(chatId, "🤖 Savolingizni aniqroq yozing.");
-  }
-});
-
 
   // Admin javob qaytaryaptimi?
  const state = userStates.get(chatId);
@@ -335,13 +340,13 @@ if (matchedKeyword) {
 
   
 
-  AI javobi
-  if (text.length > 5) {
-    const aiReply = await getAIResponse(text);
-    await bot.sendMessage(chatId, aiReply);
-  } else {
-    await bot.sendMessage(chatId, '🤖 Qanday yordam bera olishim mumkin? Iltimos, savolingizni yozing.');
-  }
+  // AI javobi
+  // if (text.length > 5) {
+  //   const aiReply = await getAIResponse(text);
+  //   await bot.sendMessage(chatId, aiReply);
+  // } else {
+  //   await bot.sendMessage(chatId, '🤖 Qanday yordam bera olishim mumkin? Iltimos, savolingizni yozing.');
+  // }
 });
 
 
@@ -355,34 +360,26 @@ bot.onText(/\/ai (.+)/, async (msg, match) => {
 });
 
 // 🔁 Oddiy foydalanuvchi matn yozsa
-bot.on("message", async (msg) => {
+bot.on('message', async (msg) => {
   const chatId = msg.chat.id;
-  const text = msg.text?.toLowerCase() || "";
+  const text = msg.text?.toLowerCase() || '';
 
-  // 🔍 Agar kalit so‘z bo‘lsa
-  const matchedKeyword = keywords.find((word) => text.includes(word));
+  // ✅ Kalit so‘z bo‘lsa — media yuboriladi
+  const matchedKeyword = keywords.find(word => text.includes(word));
   if (matchedKeyword) {
-    await bot.sendMessage(
-      chatId,
-      `📦 Bu *${matchedKeyword}* bo‘yicha maʼlumotlar:`,
-      { parse_mode: "Markdown" }
-    );
+    await bot.sendMessage(chatId, `📦 Bu *${matchedKeyword}* bo‘yicha maʼlumotlar:`, { parse_mode: 'Markdown' });
     await sendAllMediaToUser(chatId);
     return;
   }
 
-  // 🤖 Agar matn uzunroq bo‘lsa
+  // 🔮 Kalit so‘z topilmasa — AI javobi qaytariladi
   if (text.length > 5) {
-    const aiReply = await getAIResponse(text); // ✅ endi xato bermaydi
+    const aiReply = await getAIResponse(text);
     await bot.sendMessage(chatId, aiReply);
   } else {
-    await bot.sendMessage(
-      chatId,
-      "🤖 Qanday yordam bera olishim mumkin? Iltimos, savolingizni yozing."
-    );
+    await bot.sendMessage(chatId, "🤖 Qanday yordam bera olishim mumkin? Iltimos, savolingizni yozing.");
   }
 });
-
 
 // 🟢 Callback tugmalar uchun misol (boshqasini ham o‘zingiz qo‘shishingiz mumkin)
 bot.on('callback_query', async (query) => {
@@ -607,10 +604,4 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
 
   await bot.answerCallbackQuery(query.id);
 });
-
-
-
-
-
-
 
