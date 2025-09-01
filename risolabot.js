@@ -22,8 +22,44 @@ mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('📦 MongoDB ulanildi'))
   .catch((err) => console.error('❌ MongoDB xatolik:', err.message));
 
+// 🔧 Fayl va media yordamchi funksiyalar
+function getFileType(filename) {
+  const ext = path.extname(filename).toLowerCase();
+  if (['.jpg', '.jpeg', '.png'].includes(ext)) return 'photo';
+  if (['.mp4', '.mov'].includes(ext)) return 'video';
+  return null;
+}
 
+async function sendAllMediaToUser(userId) {
+  try {
+    const mediaDir = './media';
+    const files = fs.readdirSync(mediaDir);
 
+    const mediaItems = files.map(file => {
+      const type = getFileType(file);
+      if (!type) return null;
+
+      return {
+        type,
+        media: fs.readFileSync(path.join(mediaDir, file)),
+        caption: `📁 ${file}`
+      };
+    }).filter(Boolean);
+
+    if (mediaItems.length === 0) return bot.sendMessage(userId, '❗ Media topilmadi.');
+
+    const chunkSize = 10;
+    for (let i = 0; i < mediaItems.length; i += chunkSize) {
+      const chunk = mediaItems.slice(i, i + chunkSize);
+      await bot.sendMediaGroup(userId, chunk);
+    }
+
+    await bot.sendMessage(userId, '✅ Barcha media yuborildi.');
+  } catch (err) {
+    console.error('❌ Media yuborishda xato:', err.message);
+    await bot.sendMessage(userId, '❌ Media yuborishda xatolik yuz berdi.');
+  }
+}
 
 // 📚 AI javob olish funksiyasi
 async function getAIResponse(prompt) {
@@ -204,7 +240,8 @@ Agar Toshkentdan reyslar bormi desa ha bor deysan va quyidagi telefon raqamlarig
 }
 
 
-
+// 🧠 Kalit so‘zlar ro‘yxati
+const keywords = ['ovqat', 'sharoit',  'video', 'rasm',];
 
 // 🟢 /start komandasi
 bot.onText(/\/start/, async (msg) => {
@@ -293,6 +330,16 @@ bot.on('message', async (msg) => {
     return;
   }
 
+  // Kalit so‘zlar orqali media yuborish
+const matchedKeyword = keywords.find(word => text.includes(word));
+if (matchedKeyword) {
+  await bot.sendMessage(chatId, `🤖 Qanday yordam bera olishim mumkin?`, { parse_mode: 'Markdown' });
+  return;
+}
+
+
+  
+
   // AI javobi
   // if (text.length > 5) {
   //   const aiReply = await getAIResponse(text);
@@ -313,26 +360,26 @@ bot.onText(/\/ai (.+)/, async (msg, match) => {
 });
 
 // 🔁 Oddiy foydalanuvchi matn yozsa
-// bot.on('message', async (msg) => {
-//   const chatId = msg.chat.id;
-//   const text = msg.text?.toLowerCase() || '';
+bot.on('message', async (msg) => {
+  const chatId = msg.chat.id;
+  const text = msg.text?.toLowerCase() || '';
 
-//   // ✅ Kalit so‘z bo‘lsa — media yuboriladi
-//   const matchedKeyword = keywords.find(word => text.includes(word));
-//   if (matchedKeyword) {
-//     await bot.sendMessage(chatId, `📦 Bu *${matchedKeyword}* bo‘yicha maʼlumotlar:`, { parse_mode: 'Markdown' });
-//     await sendAllMediaToUser(chatId);
-//     return;
-//   }
+  // ✅ Kalit so‘z bo‘lsa — media yuboriladi
+  const matchedKeyword = keywords.find(word => text.includes(word));
+  if (matchedKeyword) {
+    await bot.sendMessage(chatId, `📦 Bu *${matchedKeyword}* bo‘yicha maʼlumotlar:`, { parse_mode: 'Markdown' });
+    await sendAllMediaToUser(chatId);
+    return;
+  }
 
-//   // 🔮 Kalit so‘z topilmasa — AI javobi qaytariladi
-//   if (text.length > 5) {
-//     const aiReply = await getAIResponse(text);
-//     await bot.sendMessage(chatId, aiReply);
-//   } else {
-//     await bot.sendMessage(chatId, "🤖 Qanday yordam bera olishim mumkin? Iltimos, savolingizni yozing.");
-//   }
-// });
+  // 🔮 Kalit so‘z topilmasa — AI javobi qaytariladi
+  if (text.length > 5) {
+    const aiReply = await getAIResponse(text);
+    await bot.sendMessage(chatId, aiReply);
+  } else {
+    await bot.sendMessage(chatId, "🤖 Qanday yordam bera olishim mumkin? Iltimos, savolingizni yozing.");
+  }
+});
 
 // 🟢 Callback tugmalar uchun misol (boshqasini ham o‘zingiz qo‘shishingiz mumkin)
 bot.on('callback_query', async (query) => {
@@ -557,9 +604,4 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
 
   await bot.answerCallbackQuery(query.id);
 });
-
-
-
-
-
 
