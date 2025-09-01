@@ -313,26 +313,26 @@ bot.onText(/\/ai (.+)/, async (msg, match) => {
 });
 
 // 🔁 Oddiy foydalanuvchi matn yozsa
-bot.on('message', async (msg) => {
-  const chatId = msg.chat.id;
-  const text = msg.text?.toLowerCase() || '';
+// bot.on('message', async (msg) => {
+//   const chatId = msg.chat.id;
+//   const text = msg.text?.toLowerCase() || '';
 
-  // ✅ Kalit so‘z bo‘lsa — media yuboriladi
-  const matchedKeyword = keywords.find(word => text.includes(word));
-  if (matchedKeyword) {
-    await bot.sendMessage(chatId, `📦 Bu *${matchedKeyword}* bo‘yicha maʼlumotlar:`, { parse_mode: 'Markdown' });
-    await sendAllMediaToUser(chatId);
-    return;
-  }
+//   // ✅ Kalit so‘z bo‘lsa — media yuboriladi
+//   const matchedKeyword = keywords.find(word => text.includes(word));
+//   if (matchedKeyword) {
+//     await bot.sendMessage(chatId, `📦 Bu *${matchedKeyword}* bo‘yicha maʼlumotlar:`, { parse_mode: 'Markdown' });
+//     await sendAllMediaToUser(chatId);
+//     return;
+//   }
 
-  // 🔮 Kalit so‘z topilmasa — AI javobi qaytariladi
-  if (text.length > 5) {
-    const aiReply = await getAIResponse(text);
-    await bot.sendMessage(chatId, aiReply);
-  } else {
-    await bot.sendMessage(chatId, "🤖 Qanday yordam bera olishim mumkin? Iltimos, savolingizni yozing.");
-  }
-});
+//   // 🔮 Kalit so‘z topilmasa — AI javobi qaytariladi
+//   if (text.length > 5) {
+//     const aiReply = await getAIResponse(text);
+//     await bot.sendMessage(chatId, aiReply);
+//   } else {
+//     await bot.sendMessage(chatId, "🤖 Qanday yordam bera olishim mumkin? Iltimos, savolingizni yozing.");
+//   }
+// });
 
 // 🟢 Callback tugmalar uchun misol (boshqasini ham o‘zingiz qo‘shishingiz mumkin)
 bot.on('callback_query', async (query) => {
@@ -557,6 +557,7 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
 
   await bot.answerCallbackQuery(query.id);
 });
+
 
 
 
