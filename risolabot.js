@@ -94,27 +94,7 @@ async function getAIResponse(prompt) {
 📞 Batafsil ma’lumot uchun: +998781134444
 
 
-6 kunlik paketi 🕋✈️
 
-💰 Hapx: 750$
-
-📅 Uchish: 4-sentyabr
-
-🛫 Namangan reys:
-🗺 Yo‘nalish: Namangan – Madina
-
-🏨 Madinada mehmonxona: 
-📍 150–200 metr atrofida Saraya Harmony
-🗓 3 kun 
-🍽 2 mahal milliy taom beriladi 
-
-🏨 Makkada mehmonxona: 3 kun turadi
-🏙 Sunud Marva: 3 km atrofida, 🚶♂️ 4 minutlik yo‘l
-🏙 Sunud Dana: 5 km atrofida, 🚶♂️ 5 minutlik yo‘l
-🏙 Abdulhafiz: 3 km atrofida, 🚶♂️ 6 minutlik yo‘l
-🍛 3 mahal o‘zbek milliy taomi 
-
-Shu 6 kunlik haqida sorasa javob ber
 
 
 📦 *Bizning xizmatlarimiz:*
@@ -173,8 +153,6 @@ Agar Toshkentdan reyslar bormi desa ha bor deysan va quyidagi telefon raqamlarig
 
  Agar mijoz katta skidkada oganla mi deyman shunday deb yozsa javob berma.
 
- Agar 6 kunlik paket haqida sorashsa 6 kunlik paketni taqdim qil bizda ajoyib yanglik deb.
- 6 kunlik paket hozirda 11-sentyabr   sanasiga bor keyinchalikka ham tshkil qilish rejada bor deb javob berasan agar boshqa sanaga ham bormi 6 kunlik paket deyishsa 
 
  Agar grupppa yoki kanal adminlari yozsa yoki video yokida rasm tashlasa shunchaki sukut saqla
 
@@ -603,6 +581,7 @@ else if (data.startsWith('reply_') && userId === ADMIN_ID) {
 
   await bot.answerCallbackQuery(query.id);
 });
+
 
 
 
